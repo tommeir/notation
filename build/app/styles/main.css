@@ -62,7 +62,7 @@ input[type=integer]:not(:nth-of-type(2)):not(.align-left) {
 .field {
   margin: .5em;
   display: flex; }
-  .field:not(.field--patterns) {
+  .field:not(.field--patterns) .field:not(.field--patterns-scale) {
     align-items: baseline; }
 
 .field__label {
@@ -72,7 +72,11 @@ input[type=integer]:not(:nth-of-type(2)):not(.align-left) {
 
 .field--patterns {
   flex-direction: row;
-  flex-basis: 100%; }
+  flex-basis: 50%; }
+
+.field--patterns-scale {
+  flex-direction: row;
+  flex-basis: 47%; }
 
 .form-actions {
   margin: .5em;

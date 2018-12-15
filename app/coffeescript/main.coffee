@@ -1,3 +1,4 @@
+
 abc_editor = new ABCJS.Editor("composition", {
   paper_id: "paper",
   warnings_id: "warnings"
@@ -15,6 +16,9 @@ random = (array) ->
 
 randomize_pitch = (pattern, pitches) ->
   pattern.replace(/c/g, () -> random(pitches))
+
+console.log(Tonal.Scale.notes("G minor"));
+
 
 generate = () ->
   settings = readSettings()

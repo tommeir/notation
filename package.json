@@ -22,7 +22,11 @@
     "gulp-inline-source": "^3.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.1.1",
+    "tonal": "^2.1.2",
     "gulp-sass": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tonal": "^2.1.2",
+    "tonal-abc-notation": "^2.1.2"
+  }
 }

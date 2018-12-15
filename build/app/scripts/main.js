@@ -29,6 +29,8 @@ randomize_pitch = function(pattern, pitches) {
   });
 };
 
+console.log(Tonal.Scale.notes("G minor"));
+
 generate = function() {
   var $composition, bar, barString, front_matter, i, j, k, l, m, n, pattern, ref, ref1, ref2, row, settings, text;
   settings = readSettings();
@@ -301,6 +303,11 @@ readSettings = function() {
   settings.patterns = $val('patterns').split(/\n/).filter(function(n) {
     return n.replace(/\s+/g, '').length > 0;
   });
+  settings.patterns2 = $val('patterns_scale').split(/\n/).filter(function(n) {
+    return n.replace(/\s+/g, '').length > 0;
+  });
+  settings.startnote = $val('startnote');
+  settings.endnote = $val('endnote');
   settings.count = $val('count_count');
   settings.meter = $val('meter_count');
   $clef = $$('clef');
@@ -321,6 +328,9 @@ readSettings = function() {
 
 applySettings = function(settings) {
   $$('patterns').value = settings.patterns;
+  $$('patterns2').value = settings.patterns2;
+  $$('startnote').value = settings.startnote;
+  $$('endnote').value = settings.endnote;
   $$('count_count').value = settings.count;
   $$('meter_count').value = settings.meter;
   $$('clef').value = settings.clef;

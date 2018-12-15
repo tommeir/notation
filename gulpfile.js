@@ -8,6 +8,9 @@ var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 var deployDest = '../leseübung-gh-pages';
 var exec = require('child_process').exec;
+var Tonal = require("tonal");
+var TonalAbc = require("tonal-abc-notation");
+
 
 var src = {
   html: 'app/*.html',
